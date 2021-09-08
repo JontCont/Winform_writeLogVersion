@@ -1,0 +1,11 @@
+C:\Users\JCont\source\repos\LogApp\LogApp\bin\Debug\LogApp.exe.config
+C:\Users\JCont\source\repos\LogApp\LogApp\bin\Debug\LogApp.exe
+C:\Users\JCont\source\repos\LogApp\LogApp\bin\Debug\LogApp.pdb
+C:\Users\JCont\source\repos\LogApp\LogApp\obj\Debug\LogApp.csproj.AssemblyReference.cache
+C:\Users\JCont\source\repos\LogApp\LogApp\obj\Debug\LogApp.LogForm.resources
+C:\Users\JCont\source\repos\LogApp\LogApp\obj\Debug\LogApp.Properties.Resources.resources
+C:\Users\JCont\source\repos\LogApp\LogApp\obj\Debug\LogApp.csproj.GenerateResource.cache
+C:\Users\JCont\source\repos\LogApp\LogApp\obj\Debug\LogApp.csproj.CoreCompileInputs.cache
+C:\Users\JCont\source\repos\LogApp\LogApp\obj\Debug\LogApp.exe
+C:\Users\JCont\source\repos\LogApp\LogApp\obj\Debug\LogApp.pdb
+C:\Users\JCont\source\repos\LogApp\LogApp\obj\Debug\LogApp.Setting.resources
