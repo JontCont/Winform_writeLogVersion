@@ -9,3 +9,14 @@ C:\Users\JCont\source\repos\LogApp\LogApp\obj\Debug\LogApp.csproj.CoreCompileInp
 C:\Users\JCont\source\repos\LogApp\LogApp\obj\Debug\LogApp.exe
 C:\Users\JCont\source\repos\LogApp\LogApp\obj\Debug\LogApp.pdb
 C:\Users\JCont\source\repos\LogApp\LogApp\obj\Debug\LogApp.Setting.resources
+D:\GitHub\source\writeLogVersion\LogApp\LogApp\bin\Debug\LogApp.exe.config
+D:\GitHub\source\writeLogVersion\LogApp\LogApp\bin\Debug\LogApp.exe
+D:\GitHub\source\writeLogVersion\LogApp\LogApp\bin\Debug\LogApp.pdb
+D:\GitHub\source\writeLogVersion\LogApp\LogApp\obj\Debug\LogApp.csproj.AssemblyReference.cache
+D:\GitHub\source\writeLogVersion\LogApp\LogApp\obj\Debug\LogApp.LogForm.resources
+D:\GitHub\source\writeLogVersion\LogApp\LogApp\obj\Debug\LogApp.Properties.Resources.resources
+D:\GitHub\source\writeLogVersion\LogApp\LogApp\obj\Debug\LogApp.Setting.resources
+D:\GitHub\source\writeLogVersion\LogApp\LogApp\obj\Debug\LogApp.csproj.GenerateResource.cache
+D:\GitHub\source\writeLogVersion\LogApp\LogApp\obj\Debug\LogApp.csproj.CoreCompileInputs.cache
+D:\GitHub\source\writeLogVersion\LogApp\LogApp\obj\Debug\LogApp.exe
+D:\GitHub\source\writeLogVersion\LogApp\LogApp\obj\Debug\LogApp.pdb

@@ -57,7 +57,7 @@ namespace LogApp
             // 
             // bt_save
             // 
-            this.bt_save.Location = new System.Drawing.Point(173, 7);
+            this.bt_save.Location = new System.Drawing.Point(180, 7);
             this.bt_save.Margin = new System.Windows.Forms.Padding(4);
             this.bt_save.Name = "bt_save";
             this.bt_save.Size = new System.Drawing.Size(131, 33);
@@ -83,7 +83,7 @@ namespace LogApp
             this.version_now.Location = new System.Drawing.Point(14, 29);
             this.version_now.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.version_now.Name = "version_now";
-            this.version_now.Size = new System.Drawing.Size(152, 25);
+            this.version_now.Size = new System.Drawing.Size(152, 29);
             this.version_now.TabIndex = 4;
             // 
             // lbl_version
@@ -92,7 +92,7 @@ namespace LogApp
             this.lbl_version.Location = new System.Drawing.Point(11, 9);
             this.lbl_version.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_version.Name = "lbl_version";
-            this.lbl_version.Size = new System.Drawing.Size(60, 17);
+            this.lbl_version.Size = new System.Drawing.Size(78, 22);
             this.lbl_version.TabIndex = 5;
             this.lbl_version.Text = "目前版本";
             // 
@@ -102,7 +102,7 @@ namespace LogApp
             this.label2.Location = new System.Drawing.Point(8, 60);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 17);
+            this.label2.Size = new System.Drawing.Size(78, 22);
             this.label2.TabIndex = 6;
             this.label2.Text = "文字內容";
             // 
@@ -112,7 +112,7 @@ namespace LogApp
             this.lbl_version_new.Location = new System.Drawing.Point(179, 9);
             this.lbl_version_new.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_version_new.Name = "lbl_version_new";
-            this.lbl_version_new.Size = new System.Drawing.Size(60, 17);
+            this.lbl_version_new.Size = new System.Drawing.Size(78, 22);
             this.lbl_version_new.TabIndex = 8;
             this.lbl_version_new.Text = "最新版本";
             // 
@@ -122,7 +122,7 @@ namespace LogApp
             this.version_new.Location = new System.Drawing.Point(179, 31);
             this.version_new.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.version_new.Name = "version_new";
-            this.version_new.Size = new System.Drawing.Size(169, 25);
+            this.version_new.Size = new System.Drawing.Size(169, 29);
             this.version_new.TabIndex = 7;
             // 
             // panel1
@@ -140,7 +140,7 @@ namespace LogApp
             // 
             // bt_open
             // 
-            this.bt_open.Location = new System.Drawing.Point(35, 7);
+            this.bt_open.Location = new System.Drawing.Point(37, 7);
             this.bt_open.Margin = new System.Windows.Forms.Padding(4);
             this.bt_open.Name = "bt_open";
             this.bt_open.Size = new System.Drawing.Size(131, 33);
@@ -151,7 +151,7 @@ namespace LogApp
             // 
             // bt_exit
             // 
-            this.bt_exit.Location = new System.Drawing.Point(316, 7);
+            this.bt_exit.Location = new System.Drawing.Point(319, 7);
             this.bt_exit.Margin = new System.Windows.Forms.Padding(4);
             this.bt_exit.Name = "bt_exit";
             this.bt_exit.Size = new System.Drawing.Size(131, 33);
@@ -205,6 +205,7 @@ namespace LogApp
             this.GridArea.Location = new System.Drawing.Point(11, 80);
             this.GridArea.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.GridArea.Name = "GridArea";
+            this.GridArea.RowHeadersWidth = 51;
             this.GridArea.RowTemplate.Height = 24;
             this.GridArea.Size = new System.Drawing.Size(466, 166);
             this.GridArea.TabIndex = 9;
@@ -213,6 +214,7 @@ namespace LogApp
             // Check
             // 
             this.Check.HeaderText = "Check";
+            this.Check.MinimumWidth = 6;
             this.Check.Name = "Check";
             this.Check.Width = 50;
             // 
@@ -228,6 +230,7 @@ namespace LogApp
             "GaoShengYuan",
             "QuiffCloud2",
             "唐銘"});
+            this.UserName.MinimumWidth = 6;
             this.UserName.Name = "UserName";
             this.UserName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.UserName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
@@ -240,6 +243,7 @@ namespace LogApp
             "修改",
             "新增",
             "刪除"});
+            this.Type.MinimumWidth = 6;
             this.Type.Name = "Type";
             this.Type.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Type.Width = 70;
@@ -247,6 +251,7 @@ namespace LogApp
             // Item
             // 
             this.Item.HeaderText = "item";
+            this.Item.MinimumWidth = 6;
             this.Item.Name = "Item";
             this.Item.ReadOnly = true;
             this.Item.Width = 50;
@@ -254,6 +259,7 @@ namespace LogApp
             // Desc
             // 
             this.Desc.HeaderText = "Desc Content";
+            this.Desc.MinimumWidth = 6;
             this.Desc.Name = "Desc";
             this.Desc.Width = 200;
             // 
@@ -264,7 +270,7 @@ namespace LogApp
             // 
             // LogForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(489, 300);
             this.Controls.Add(this.panel2);

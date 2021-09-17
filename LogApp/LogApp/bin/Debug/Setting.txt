@@ -1,2 +1,3 @@
-E:\Users\LeomonRD\Desktop\BAK\發行\MES_Cloud_DEV\bin\MES_WATER.dll
-E:\Users\LeomonRD\Desktop\BAK\發行\MES_Cloud_DEV\versiondesc.txt
+D:\GitHub\發行\MES_Work_DEV\bin\App_global.asax.dll
+D:\GitHub\發行\MES_Work_DEV\versiondesc.txt
+System.Windows.Forms.TextBox, Text: D:\GitHub\發行\MES_Work_DEV

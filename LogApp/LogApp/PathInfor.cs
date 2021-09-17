@@ -12,6 +12,7 @@ namespace LogApp
         public PathInfor(string pStart, string pEnd) { Purpose = pStart; origin = pEnd; }
         public string Purpose { get; set; }//目標(最新)
         public string origin { get; set; }//來源(txt)
+        public string Folder { get; set; }//資料夾
         public string _PATH { get; set; } = System.Windows.Forms.Application.StartupPath + "\\Setting.txt";
         public PathInfor() {
             if (File.Exists(_PATH))
@@ -25,6 +26,7 @@ namespace LogApp
                     {
                         case 0: Purpose = line; break;
                         case 1: origin = line; break;
+                        case 2: Folder = line; break;
                     }
                     counter++;
                 }
@@ -44,6 +46,7 @@ namespace LogApp
                     {
                         case 0: Purpose = line; break;
                         case 1: origin = line; break;
+                        case 2: Folder = line; break;
                     }
                     counter++;
                 }

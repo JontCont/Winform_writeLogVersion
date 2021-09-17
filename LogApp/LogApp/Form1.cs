@@ -48,7 +48,7 @@ namespace LogApp
                         , Check, dr.Cells[1].Value, dr.Cells[2].Value, dr.Cells[3].Value, dr.Cells[4].Value);
                     strDefault.Append(strFormat+"\n");
                 }
-                strDefault.Append("----------------------------------------------------------------------------\n");
+                strDefault.Append("----------------------------------------------------------------------------\n\n\n");
                 if (MessageBox.Show("是否確定存檔", "訊息", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     try {
