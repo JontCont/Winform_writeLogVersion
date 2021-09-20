@@ -44,12 +44,12 @@ namespace LogApp
             this.panel2 = new System.Windows.Forms.Panel();
             this.bt_rush = new System.Windows.Forms.Button();
             this.GridArea = new System.Windows.Forms.DataGridView();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.UserName = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Type = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridArea)).BeginInit();
@@ -211,6 +211,11 @@ namespace LogApp
             this.GridArea.TabIndex = 9;
             this.GridArea.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.GridArea_RowPostPaint);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 5000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Check
             // 
             this.Check.HeaderText = "Check";
@@ -229,7 +234,9 @@ namespace LogApp
             "huang40001854",
             "GaoShengYuan",
             "QuiffCloud2",
-            "唐銘"});
+            "唐銘",
+            "admin",
+            "other"});
             this.UserName.MinimumWidth = 6;
             this.UserName.Name = "UserName";
             this.UserName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -241,6 +248,7 @@ namespace LogApp
             this.Type.HeaderText = "Type";
             this.Type.Items.AddRange(new object[] {
             "修改",
+            "更新",
             "新增",
             "刪除"});
             this.Type.MinimumWidth = 6;
@@ -262,11 +270,6 @@ namespace LogApp
             this.Desc.MinimumWidth = 6;
             this.Desc.Name = "Desc";
             this.Desc.Width = 200;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 5000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // LogForm
             // 
@@ -303,14 +306,14 @@ namespace LogApp
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button bt_exit;
         private System.Windows.Forms.DataGridView GridArea;
+        private System.Windows.Forms.Button bt_open;
+        private System.Windows.Forms.Button bt_rush;
+        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Check;
         private System.Windows.Forms.DataGridViewComboBoxColumn UserName;
         private System.Windows.Forms.DataGridViewComboBoxColumn Type;
         private System.Windows.Forms.DataGridViewTextBoxColumn Item;
         private System.Windows.Forms.DataGridViewTextBoxColumn Desc;
-        private System.Windows.Forms.Button bt_open;
-        private System.Windows.Forms.Button bt_rush;
-        private System.Windows.Forms.Timer timer1;
     }
 }
 
