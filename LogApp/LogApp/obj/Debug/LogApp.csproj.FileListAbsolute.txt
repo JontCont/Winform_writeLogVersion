@@ -20,3 +20,14 @@ D:\GitHub\source\writeLogVersion\LogApp\LogApp\obj\Debug\LogApp.csproj.GenerateR
 D:\GitHub\source\writeLogVersion\LogApp\LogApp\obj\Debug\LogApp.csproj.CoreCompileInputs.cache
 D:\GitHub\source\writeLogVersion\LogApp\LogApp\obj\Debug\LogApp.exe
 D:\GitHub\source\writeLogVersion\LogApp\LogApp\obj\Debug\LogApp.pdb
+E:\Users\LeomonRD\Desktop\修改source\dev\LogApp\LogApp\bin\Debug\LogApp.exe.config
+E:\Users\LeomonRD\Desktop\修改source\dev\LogApp\LogApp\bin\Debug\LogApp.exe
+E:\Users\LeomonRD\Desktop\修改source\dev\LogApp\LogApp\bin\Debug\LogApp.pdb
+E:\Users\LeomonRD\Desktop\修改source\dev\LogApp\LogApp\obj\Debug\LogApp.csproj.AssemblyReference.cache
+E:\Users\LeomonRD\Desktop\修改source\dev\LogApp\LogApp\obj\Debug\LogApp.LogForm.resources
+E:\Users\LeomonRD\Desktop\修改source\dev\LogApp\LogApp\obj\Debug\LogApp.Properties.Resources.resources
+E:\Users\LeomonRD\Desktop\修改source\dev\LogApp\LogApp\obj\Debug\LogApp.Setting.resources
+E:\Users\LeomonRD\Desktop\修改source\dev\LogApp\LogApp\obj\Debug\LogApp.csproj.GenerateResource.cache
+E:\Users\LeomonRD\Desktop\修改source\dev\LogApp\LogApp\obj\Debug\LogApp.csproj.CoreCompileInputs.cache
+E:\Users\LeomonRD\Desktop\修改source\dev\LogApp\LogApp\obj\Debug\LogApp.exe
+E:\Users\LeomonRD\Desktop\修改source\dev\LogApp\LogApp\obj\Debug\LogApp.pdb

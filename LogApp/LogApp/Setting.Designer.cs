@@ -29,6 +29,7 @@ namespace LogApp
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Setting));
             this.textArea_01 = new System.Windows.Forms.TextBox();
             this.bt_Save = new System.Windows.Forms.Button();
@@ -37,12 +38,25 @@ namespace LogApp
             this.bt_chosen_02 = new System.Windows.Forms.Button();
             this.textArea_02 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.bt_folder = new System.Windows.Forms.Button();
+            this.txt_folder = new System.Windows.Forms.TextBox();
+            this.lbl_desc = new System.Windows.Forms.Label();
             this.lblText02 = new System.Windows.Forms.Label();
             this.lblText01 = new System.Windows.Forms.Label();
-            this.lbl_desc = new System.Windows.Forms.Label();
-            this.txt_folder = new System.Windows.Forms.TextBox();
-            this.bt_folder = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.bt_asny = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txt_area_2 = new System.Windows.Forms.TextBox();
+            this.bt_chosen_1 = new System.Windows.Forms.Button();
+            this.bt_chosen_2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_area_1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.bt_start = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // textArea_01
@@ -51,16 +65,16 @@ namespace LogApp
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textArea_01.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textArea_01.Location = new System.Drawing.Point(20, 127);
+            this.textArea_01.Location = new System.Drawing.Point(18, 63);
             this.textArea_01.Margin = new System.Windows.Forms.Padding(5);
             this.textArea_01.Name = "textArea_01";
-            this.textArea_01.Size = new System.Drawing.Size(251, 34);
+            this.textArea_01.Size = new System.Drawing.Size(253, 29);
             this.textArea_01.TabIndex = 0;
             // 
             // bt_Save
             // 
             this.bt_Save.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.bt_Save.Location = new System.Drawing.Point(94, 276);
+            this.bt_Save.Location = new System.Drawing.Point(36, 310);
             this.bt_Save.Name = "bt_Save";
             this.bt_Save.Size = new System.Drawing.Size(84, 30);
             this.bt_Save.TabIndex = 2;
@@ -70,7 +84,7 @@ namespace LogApp
             // 
             // bt_return
             // 
-            this.bt_return.Location = new System.Drawing.Point(205, 276);
+            this.bt_return.Location = new System.Drawing.Point(152, 310);
             this.bt_return.Name = "bt_return";
             this.bt_return.Size = new System.Drawing.Size(84, 30);
             this.bt_return.TabIndex = 3;
@@ -81,7 +95,7 @@ namespace LogApp
             // bt_chosen_01
             // 
             this.bt_chosen_01.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.bt_chosen_01.Location = new System.Drawing.Point(293, 123);
+            this.bt_chosen_01.Location = new System.Drawing.Point(291, 59);
             this.bt_chosen_01.Name = "bt_chosen_01";
             this.bt_chosen_01.Size = new System.Drawing.Size(72, 36);
             this.bt_chosen_01.TabIndex = 4;
@@ -92,7 +106,7 @@ namespace LogApp
             // bt_chosen_02
             // 
             this.bt_chosen_02.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.bt_chosen_02.Location = new System.Drawing.Point(293, 188);
+            this.bt_chosen_02.Location = new System.Drawing.Point(291, 124);
             this.bt_chosen_02.Name = "bt_chosen_02";
             this.bt_chosen_02.Size = new System.Drawing.Size(72, 38);
             this.bt_chosen_02.TabIndex = 6;
@@ -106,10 +120,10 @@ namespace LogApp
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textArea_02.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textArea_02.Location = new System.Drawing.Point(20, 193);
+            this.textArea_02.Location = new System.Drawing.Point(18, 129);
             this.textArea_02.Margin = new System.Windows.Forms.Padding(5);
             this.textArea_02.Name = "textArea_02";
-            this.textArea_02.Size = new System.Drawing.Size(251, 34);
+            this.textArea_02.Size = new System.Drawing.Size(253, 29);
             this.textArea_02.TabIndex = 5;
             // 
             // groupBox1
@@ -117,62 +131,17 @@ namespace LogApp
             this.groupBox1.Controls.Add(this.bt_folder);
             this.groupBox1.Controls.Add(this.txt_folder);
             this.groupBox1.Controls.Add(this.lbl_desc);
-            this.groupBox1.Controls.Add(this.lblText02);
-            this.groupBox1.Controls.Add(this.lblText01);
-            this.groupBox1.Controls.Add(this.textArea_01);
-            this.groupBox1.Controls.Add(this.bt_chosen_02);
-            this.groupBox1.Controls.Add(this.bt_chosen_01);
-            this.groupBox1.Controls.Add(this.textArea_02);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(376, 242);
+            this.groupBox1.Size = new System.Drawing.Size(376, 95);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "設定檔";
             // 
-            // lblText02
-            // 
-            this.lblText02.AutoSize = true;
-            this.lblText02.Location = new System.Drawing.Point(16, 168);
-            this.lblText02.Name = "lblText02";
-            this.lblText02.Size = new System.Drawing.Size(112, 25);
-            this.lblText02.TabIndex = 8;
-            this.lblText02.Text = "記錄檔路徑";
-            // 
-            // lblText01
-            // 
-            this.lblText01.AutoSize = true;
-            this.lblText01.Location = new System.Drawing.Point(16, 100);
-            this.lblText01.Name = "lblText01";
-            this.lblText01.Size = new System.Drawing.Size(132, 25);
-            this.lblText01.TabIndex = 7;
-            this.lblText01.Text = "最新檔案路徑";
-            // 
-            // lbl_desc
-            // 
-            this.lbl_desc.AutoSize = true;
-            this.lbl_desc.Location = new System.Drawing.Point(16, 30);
-            this.lbl_desc.Name = "lbl_desc";
-            this.lbl_desc.Size = new System.Drawing.Size(112, 25);
-            this.lbl_desc.TabIndex = 9;
-            this.lbl_desc.Text = "專案資料夾";
-            // 
-            // txt_folder
-            // 
-            this.txt_folder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_folder.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txt_folder.Location = new System.Drawing.Point(21, 61);
-            this.txt_folder.Margin = new System.Windows.Forms.Padding(5);
-            this.txt_folder.Name = "txt_folder";
-            this.txt_folder.Size = new System.Drawing.Size(251, 34);
-            this.txt_folder.TabIndex = 10;
-            // 
             // bt_folder
             // 
             this.bt_folder.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.bt_folder.Location = new System.Drawing.Point(293, 59);
+            this.bt_folder.Location = new System.Drawing.Point(298, 47);
             this.bt_folder.Name = "bt_folder";
             this.bt_folder.Size = new System.Drawing.Size(72, 36);
             this.bt_folder.TabIndex = 11;
@@ -180,16 +149,178 @@ namespace LogApp
             this.bt_folder.UseVisualStyleBackColor = true;
             this.bt_folder.Click += new System.EventHandler(this.bt_folder_Click);
             // 
+            // txt_folder
+            // 
+            this.txt_folder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_folder.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txt_folder.Location = new System.Drawing.Point(21, 50);
+            this.txt_folder.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_folder.Name = "txt_folder";
+            this.txt_folder.Size = new System.Drawing.Size(269, 29);
+            this.txt_folder.TabIndex = 10;
+            // 
+            // lbl_desc
+            // 
+            this.lbl_desc.AutoSize = true;
+            this.lbl_desc.Location = new System.Drawing.Point(14, 25);
+            this.lbl_desc.Name = "lbl_desc";
+            this.lbl_desc.Size = new System.Drawing.Size(89, 20);
+            this.lbl_desc.TabIndex = 9;
+            this.lbl_desc.Text = "專案資料夾";
+            // 
+            // lblText02
+            // 
+            this.lblText02.AutoSize = true;
+            this.lblText02.Location = new System.Drawing.Point(4, 101);
+            this.lblText02.Name = "lblText02";
+            this.lblText02.Size = new System.Drawing.Size(89, 20);
+            this.lblText02.TabIndex = 8;
+            this.lblText02.Text = "記錄檔路徑";
+            // 
+            // lblText01
+            // 
+            this.lblText01.AutoSize = true;
+            this.lblText01.Location = new System.Drawing.Point(6, 32);
+            this.lblText01.Name = "lblText01";
+            this.lblText01.Size = new System.Drawing.Size(105, 20);
+            this.lblText01.TabIndex = 7;
+            this.lblText01.Text = "最新檔案路徑";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.textArea_02);
+            this.groupBox2.Controls.Add(this.bt_chosen_01);
+            this.groupBox2.Controls.Add(this.bt_chosen_02);
+            this.groupBox2.Controls.Add(this.lblText02);
+            this.groupBox2.Controls.Add(this.textArea_01);
+            this.groupBox2.Controls.Add(this.lblText01);
+            this.groupBox2.Location = new System.Drawing.Point(12, 113);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(376, 185);
+            this.groupBox2.TabIndex = 8;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "自訂路徑(非必填)";
+            // 
+            // bt_asny
+            // 
+            this.bt_asny.Location = new System.Drawing.Point(268, 310);
+            this.bt_asny.Name = "bt_asny";
+            this.bt_asny.Size = new System.Drawing.Size(107, 30);
+            this.bt_asny.TabIndex = 9;
+            this.bt_asny.Text = "同步檔案>>";
+            this.bt_asny.UseVisualStyleBackColor = true;
+            this.bt_asny.Click += new System.EventHandler(this.bt_asny_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.bt_start);
+            this.groupBox3.Controls.Add(this.txt_area_2);
+            this.groupBox3.Controls.Add(this.bt_chosen_1);
+            this.groupBox3.Controls.Add(this.bt_chosen_2);
+            this.groupBox3.Controls.Add(this.label1);
+            this.groupBox3.Controls.Add(this.txt_area_1);
+            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Location = new System.Drawing.Point(412, 12);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(376, 211);
+            this.groupBox3.TabIndex = 10;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "同步檔案";
+            // 
+            // txt_area_2
+            // 
+            this.txt_area_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_area_2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txt_area_2.Location = new System.Drawing.Point(18, 129);
+            this.txt_area_2.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_area_2.Name = "txt_area_2";
+            this.txt_area_2.Size = new System.Drawing.Size(253, 29);
+            this.txt_area_2.TabIndex = 5;
+            // 
+            // bt_chosen_1
+            // 
+            this.bt_chosen_1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.bt_chosen_1.Location = new System.Drawing.Point(291, 59);
+            this.bt_chosen_1.Name = "bt_chosen_1";
+            this.bt_chosen_1.Size = new System.Drawing.Size(72, 36);
+            this.bt_chosen_1.TabIndex = 4;
+            this.bt_chosen_1.Text = "選擇檔案";
+            this.bt_chosen_1.UseVisualStyleBackColor = true;
+            this.bt_chosen_1.Click += new System.EventHandler(this.bt_chosen_1_Click);
+            // 
+            // bt_chosen_2
+            // 
+            this.bt_chosen_2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.bt_chosen_2.Location = new System.Drawing.Point(291, 124);
+            this.bt_chosen_2.Name = "bt_chosen_2";
+            this.bt_chosen_2.Size = new System.Drawing.Size(72, 38);
+            this.bt_chosen_2.TabIndex = 6;
+            this.bt_chosen_2.Text = "選擇檔案";
+            this.bt_chosen_2.UseVisualStyleBackColor = true;
+            this.bt_chosen_2.Click += new System.EventHandler(this.bt_chosen_2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(4, 101);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 20);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "目標路徑";
+            // 
+            // txt_area_1
+            // 
+            this.txt_area_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_area_1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txt_area_1.Location = new System.Drawing.Point(18, 63);
+            this.txt_area_1.Margin = new System.Windows.Forms.Padding(5);
+            this.txt_area_1.Name = "txt_area_1";
+            this.txt_area_1.Size = new System.Drawing.Size(253, 29);
+            this.txt_area_1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 20);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "來源路徑";
+            // 
+            // bt_start
+            // 
+            this.bt_start.Location = new System.Drawing.Point(140, 168);
+            this.bt_start.Name = "bt_start";
+            this.bt_start.Size = new System.Drawing.Size(84, 30);
+            this.bt_start.TabIndex = 11;
+            this.bt_start.Text = "開始同步";
+            this.bt_start.UseVisualStyleBackColor = true;
+            this.bt_start.Click += new System.EventHandler(this.bt_start_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            // 
             // Setting
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(401, 318);
+            this.ClientSize = new System.Drawing.Size(399, 360);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.bt_asny);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.bt_return);
             this.Controls.Add(this.bt_Save);
             this.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Setting";
@@ -198,6 +329,10 @@ namespace LogApp
             this.Load += new System.EventHandler(this.Setting_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -216,5 +351,16 @@ namespace LogApp
         private System.Windows.Forms.Button bt_folder;
         private System.Windows.Forms.TextBox txt_folder;
         private System.Windows.Forms.Label lbl_desc;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button bt_asny;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox txt_area_2;
+        private System.Windows.Forms.Button bt_chosen_1;
+        private System.Windows.Forms.Button bt_chosen_2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txt_area_1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button bt_start;
+        private System.Windows.Forms.Timer timer1;
     }
 }

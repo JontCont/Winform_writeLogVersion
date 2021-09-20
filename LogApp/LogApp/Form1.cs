@@ -33,7 +33,7 @@ namespace LogApp
             if (GridArea.Rows.Count <= 0 || GridArea.Rows[0].Cells[1].Value == null) { MessageBox.Show("尚未輸入資料", "提示視窗", MessageBoxButtons.OK); return; }
             if (GridArea.Rows.Count > 0) {
                 //取得來源路徑
-                string path =new PathInfor().origin;
+                string path =new PathInfor().Origin;
                 if (!File.Exists(path)) File.WriteAllText(path, "");
                 //取得目前檔案內容
                 StringBuilder strData = new StringBuilder("").Append(File.ReadAllText(path));
@@ -77,9 +77,9 @@ namespace LogApp
         }
         private void bt_open_Click(object sender, EventArgs e)
         {
-            if (File.Exists(new PathInfor().origin))
+            if (File.Exists(new PathInfor().Origin))
             {
-                System.Diagnostics.Process.Start(new PathInfor().origin);
+                System.Diagnostics.Process.Start(new PathInfor().Origin);
             }
             else { 
                 MessageBox.Show("無此檔案", "訊息", MessageBoxButtons.OK);
