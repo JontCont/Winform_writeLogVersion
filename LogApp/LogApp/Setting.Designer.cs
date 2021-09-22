@@ -46,13 +46,14 @@ namespace LogApp
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.bt_asny = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.bt_switch = new System.Windows.Forms.Button();
+            this.bt_start = new System.Windows.Forms.Button();
             this.txt_area_2 = new System.Windows.Forms.TextBox();
             this.bt_chosen_1 = new System.Windows.Forms.Button();
             this.bt_chosen_2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_area_1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.bt_start = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -68,7 +69,7 @@ namespace LogApp
             this.textArea_01.Location = new System.Drawing.Point(18, 63);
             this.textArea_01.Margin = new System.Windows.Forms.Padding(5);
             this.textArea_01.Name = "textArea_01";
-            this.textArea_01.Size = new System.Drawing.Size(253, 29);
+            this.textArea_01.Size = new System.Drawing.Size(253, 34);
             this.textArea_01.TabIndex = 0;
             // 
             // bt_Save
@@ -123,7 +124,7 @@ namespace LogApp
             this.textArea_02.Location = new System.Drawing.Point(18, 129);
             this.textArea_02.Margin = new System.Windows.Forms.Padding(5);
             this.textArea_02.Name = "textArea_02";
-            this.textArea_02.Size = new System.Drawing.Size(253, 29);
+            this.textArea_02.Size = new System.Drawing.Size(253, 34);
             this.textArea_02.TabIndex = 5;
             // 
             // groupBox1
@@ -158,7 +159,7 @@ namespace LogApp
             this.txt_folder.Location = new System.Drawing.Point(21, 50);
             this.txt_folder.Margin = new System.Windows.Forms.Padding(5);
             this.txt_folder.Name = "txt_folder";
-            this.txt_folder.Size = new System.Drawing.Size(269, 29);
+            this.txt_folder.Size = new System.Drawing.Size(269, 34);
             this.txt_folder.TabIndex = 10;
             // 
             // lbl_desc
@@ -166,7 +167,7 @@ namespace LogApp
             this.lbl_desc.AutoSize = true;
             this.lbl_desc.Location = new System.Drawing.Point(14, 25);
             this.lbl_desc.Name = "lbl_desc";
-            this.lbl_desc.Size = new System.Drawing.Size(89, 20);
+            this.lbl_desc.Size = new System.Drawing.Size(112, 25);
             this.lbl_desc.TabIndex = 9;
             this.lbl_desc.Text = "專案資料夾";
             // 
@@ -175,7 +176,7 @@ namespace LogApp
             this.lblText02.AutoSize = true;
             this.lblText02.Location = new System.Drawing.Point(4, 101);
             this.lblText02.Name = "lblText02";
-            this.lblText02.Size = new System.Drawing.Size(89, 20);
+            this.lblText02.Size = new System.Drawing.Size(112, 25);
             this.lblText02.TabIndex = 8;
             this.lblText02.Text = "記錄檔路徑";
             // 
@@ -184,7 +185,7 @@ namespace LogApp
             this.lblText01.AutoSize = true;
             this.lblText01.Location = new System.Drawing.Point(6, 32);
             this.lblText01.Name = "lblText01";
-            this.lblText01.Size = new System.Drawing.Size(105, 20);
+            this.lblText01.Size = new System.Drawing.Size(132, 25);
             this.lblText01.TabIndex = 7;
             this.lblText01.Text = "最新檔案路徑";
             // 
@@ -215,6 +216,7 @@ namespace LogApp
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.bt_switch);
             this.groupBox3.Controls.Add(this.bt_start);
             this.groupBox3.Controls.Add(this.txt_area_2);
             this.groupBox3.Controls.Add(this.bt_chosen_1);
@@ -224,10 +226,30 @@ namespace LogApp
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Location = new System.Drawing.Point(412, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(376, 211);
+            this.groupBox3.Size = new System.Drawing.Size(376, 263);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "同步檔案";
+            // 
+            // bt_switch
+            // 
+            this.bt_switch.Location = new System.Drawing.Point(140, 109);
+            this.bt_switch.Name = "bt_switch";
+            this.bt_switch.Size = new System.Drawing.Size(84, 30);
+            this.bt_switch.TabIndex = 12;
+            this.bt_switch.Text = ">>";
+            this.bt_switch.UseVisualStyleBackColor = true;
+            this.bt_switch.Click += new System.EventHandler(this.bt_switch_Click);
+            // 
+            // bt_start
+            // 
+            this.bt_start.Location = new System.Drawing.Point(150, 220);
+            this.bt_start.Name = "bt_start";
+            this.bt_start.Size = new System.Drawing.Size(84, 30);
+            this.bt_start.TabIndex = 11;
+            this.bt_start.Text = "開始同步";
+            this.bt_start.UseVisualStyleBackColor = true;
+            this.bt_start.Click += new System.EventHandler(this.bt_start_Click);
             // 
             // txt_area_2
             // 
@@ -235,10 +257,10 @@ namespace LogApp
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_area_2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txt_area_2.Location = new System.Drawing.Point(18, 129);
+            this.txt_area_2.Location = new System.Drawing.Point(27, 173);
             this.txt_area_2.Margin = new System.Windows.Forms.Padding(5);
             this.txt_area_2.Name = "txt_area_2";
-            this.txt_area_2.Size = new System.Drawing.Size(253, 29);
+            this.txt_area_2.Size = new System.Drawing.Size(253, 34);
             this.txt_area_2.TabIndex = 5;
             // 
             // bt_chosen_1
@@ -255,7 +277,7 @@ namespace LogApp
             // bt_chosen_2
             // 
             this.bt_chosen_2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.bt_chosen_2.Location = new System.Drawing.Point(291, 124);
+            this.bt_chosen_2.Location = new System.Drawing.Point(300, 168);
             this.bt_chosen_2.Name = "bt_chosen_2";
             this.bt_chosen_2.Size = new System.Drawing.Size(72, 38);
             this.bt_chosen_2.TabIndex = 6;
@@ -266,9 +288,9 @@ namespace LogApp
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 101);
+            this.label1.Location = new System.Drawing.Point(13, 145);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 20);
+            this.label1.Size = new System.Drawing.Size(92, 25);
             this.label1.TabIndex = 8;
             this.label1.Text = "目標路徑";
             // 
@@ -281,7 +303,7 @@ namespace LogApp
             this.txt_area_1.Location = new System.Drawing.Point(18, 63);
             this.txt_area_1.Margin = new System.Windows.Forms.Padding(5);
             this.txt_area_1.Name = "txt_area_1";
-            this.txt_area_1.Size = new System.Drawing.Size(253, 29);
+            this.txt_area_1.Size = new System.Drawing.Size(253, 34);
             this.txt_area_1.TabIndex = 0;
             // 
             // label2
@@ -289,19 +311,9 @@ namespace LogApp
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 20);
+            this.label2.Size = new System.Drawing.Size(92, 25);
             this.label2.TabIndex = 7;
             this.label2.Text = "來源路徑";
-            // 
-            // bt_start
-            // 
-            this.bt_start.Location = new System.Drawing.Point(140, 168);
-            this.bt_start.Name = "bt_start";
-            this.bt_start.Size = new System.Drawing.Size(84, 30);
-            this.bt_start.TabIndex = 11;
-            this.bt_start.Text = "開始同步";
-            this.bt_start.UseVisualStyleBackColor = true;
-            this.bt_start.Click += new System.EventHandler(this.bt_start_Click);
             // 
             // timer1
             // 
@@ -309,10 +321,10 @@ namespace LogApp
             // 
             // Setting
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(399, 360);
+            this.ClientSize = new System.Drawing.Size(401, 360);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.bt_asny);
             this.Controls.Add(this.groupBox2);
@@ -362,5 +374,6 @@ namespace LogApp
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button bt_start;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button bt_switch;
     }
 }

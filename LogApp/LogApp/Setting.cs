@@ -148,6 +148,12 @@ namespace LogApp
             }
         }
 
-
+        private void bt_switch_Click(object sender, EventArgs e)
+        {
+            string temp = "";
+            temp = txt_area_1.Text;
+            txt_area_1.Text = txt_area_2.Text;
+            txt_area_2.Text = temp;
+        }
     }
 }
