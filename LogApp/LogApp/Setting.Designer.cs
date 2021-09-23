@@ -46,6 +46,7 @@ namespace LogApp
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.bt_asny = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.bt_MVC = new System.Windows.Forms.Button();
             this.bt_switch = new System.Windows.Forms.Button();
             this.bt_start = new System.Windows.Forms.Button();
             this.txt_area_2 = new System.Windows.Forms.TextBox();
@@ -216,6 +217,7 @@ namespace LogApp
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.bt_MVC);
             this.groupBox3.Controls.Add(this.bt_switch);
             this.groupBox3.Controls.Add(this.bt_start);
             this.groupBox3.Controls.Add(this.txt_area_2);
@@ -230,6 +232,16 @@ namespace LogApp
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "同步檔案";
+            // 
+            // bt_MVC
+            // 
+            this.bt_MVC.Location = new System.Drawing.Point(37, 220);
+            this.bt_MVC.Name = "bt_MVC";
+            this.bt_MVC.Size = new System.Drawing.Size(84, 30);
+            this.bt_MVC.TabIndex = 13;
+            this.bt_MVC.Text = "MVC同步";
+            this.bt_MVC.UseVisualStyleBackColor = true;
+            this.bt_MVC.Click += new System.EventHandler(this.bt_MVC_Click);
             // 
             // bt_switch
             // 
@@ -266,7 +278,7 @@ namespace LogApp
             // bt_chosen_1
             // 
             this.bt_chosen_1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.bt_chosen_1.Location = new System.Drawing.Point(291, 59);
+            this.bt_chosen_1.Location = new System.Drawing.Point(298, 60);
             this.bt_chosen_1.Name = "bt_chosen_1";
             this.bt_chosen_1.Size = new System.Drawing.Size(72, 36);
             this.bt_chosen_1.TabIndex = 4;
@@ -324,7 +336,7 @@ namespace LogApp
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(401, 360);
+            this.ClientSize = new System.Drawing.Size(395, 360);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.bt_asny);
             this.Controls.Add(this.groupBox2);
@@ -375,5 +387,6 @@ namespace LogApp
         private System.Windows.Forms.Button bt_start;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button bt_switch;
+        private System.Windows.Forms.Button bt_MVC;
     }
 }

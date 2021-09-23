@@ -155,5 +155,39 @@ namespace LogApp
             txt_area_1.Text = txt_area_2.Text;
             txt_area_2.Text = temp;
         }
+
+        private void bt_MVC_Click(object sender, EventArgs e)
+        {
+            PathInfor PathInfo = new PathInfor();
+            string Purpose = txt_area_1.Text;
+            string Orgin = txt_area_2.Text;
+            if (Purpose == "" && Orgin == "")
+            {
+                MessageBox.Show("尚未填入相關路徑", "✔訊息", MessageBoxButtons.OK);
+                return;
+            }
+            if (!Directory.Exists(Purpose) || !Directory.Exists(Orgin))
+            {
+                MessageBox.Show("路徑有誤或是不存在", "✔訊息", MessageBoxButtons.OK);
+                return;
+            }
+            DialogResult result = MessageBox.Show("此功能會將所有檔案覆蓋掉，確定是否要執行?", "✔訊息", MessageBoxButtons.OKCancel);
+            if (result == DialogResult.OK)
+            {
+                timer1.Start();
+                List<string> UpdateList = new List<string>() { 
+                    "\\Views\\","\\Controllers\\","\\Models\\","\\Repository\\","\\Content\\","\\Scripts\\"
+                };
+                foreach(string sPart in UpdateList)
+                {
+                    if(Directory.Exists(Purpose + sPart))
+                    {
+                        PathInfo.DirectoryFileCopy(Purpose+sPart, Orgin + sPart, true);
+                    }
+                }
+                MessageBox.Show("同步成功\n" + "完成時間 :" + PathInfo.Run_Timer + "秒", "✔訊息", MessageBoxButtons.OK);
+                timer1.Stop();
+            }
+        }
     }
 }
