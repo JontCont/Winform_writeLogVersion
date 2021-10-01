@@ -45,6 +45,9 @@ namespace LogApp
             this.bt_rush = new System.Windows.Forms.Button();
             this.GridArea = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.mES_CloudDataSet = new LogApp.MES_CloudDataSet();
+            this.bDP080000BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bDP08_0000TableAdapter = new LogApp.MES_CloudDataSetTableAdapters.BDP08_0000TableAdapter();
             this.Check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.UserName = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Type = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -53,6 +56,8 @@ namespace LogApp
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridArea)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mES_CloudDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bDP080000BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bt_save
@@ -83,7 +88,7 @@ namespace LogApp
             this.version_now.Location = new System.Drawing.Point(14, 29);
             this.version_now.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.version_now.Name = "version_now";
-            this.version_now.Size = new System.Drawing.Size(152, 29);
+            this.version_now.Size = new System.Drawing.Size(152, 25);
             this.version_now.TabIndex = 4;
             // 
             // lbl_version
@@ -92,7 +97,7 @@ namespace LogApp
             this.lbl_version.Location = new System.Drawing.Point(11, 9);
             this.lbl_version.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_version.Name = "lbl_version";
-            this.lbl_version.Size = new System.Drawing.Size(78, 22);
+            this.lbl_version.Size = new System.Drawing.Size(60, 17);
             this.lbl_version.TabIndex = 5;
             this.lbl_version.Text = "目前版本";
             // 
@@ -102,7 +107,7 @@ namespace LogApp
             this.label2.Location = new System.Drawing.Point(8, 60);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 22);
+            this.label2.Size = new System.Drawing.Size(60, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "文字內容";
             // 
@@ -112,7 +117,7 @@ namespace LogApp
             this.lbl_version_new.Location = new System.Drawing.Point(179, 9);
             this.lbl_version_new.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_version_new.Name = "lbl_version_new";
-            this.lbl_version_new.Size = new System.Drawing.Size(78, 22);
+            this.lbl_version_new.Size = new System.Drawing.Size(60, 17);
             this.lbl_version_new.TabIndex = 8;
             this.lbl_version_new.Text = "最新版本";
             // 
@@ -122,7 +127,7 @@ namespace LogApp
             this.version_new.Location = new System.Drawing.Point(179, 31);
             this.version_new.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.version_new.Name = "version_new";
-            this.version_new.Size = new System.Drawing.Size(169, 29);
+            this.version_new.Size = new System.Drawing.Size(169, 25);
             this.version_new.TabIndex = 7;
             // 
             // panel1
@@ -216,6 +221,20 @@ namespace LogApp
             this.timer1.Interval = 5000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // mES_CloudDataSet
+            // 
+            this.mES_CloudDataSet.DataSetName = "MES_CloudDataSet";
+            this.mES_CloudDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bDP080000BindingSource
+            // 
+            this.bDP080000BindingSource.DataMember = "BDP08_0000";
+            this.bDP080000BindingSource.DataSource = this.mES_CloudDataSet;
+            // 
+            // bDP08_0000TableAdapter
+            // 
+            this.bDP08_0000TableAdapter.ClearBeforeFill = true;
+            // 
             // Check
             // 
             this.Check.HeaderText = "Check";
@@ -225,18 +244,9 @@ namespace LogApp
             // 
             // UserName
             // 
+            this.UserName.DataSource = this.bDP080000BindingSource;
+            this.UserName.DisplayMember = "usr_name";
             this.UserName.HeaderText = "Edit Name";
-            this.UserName.Items.AddRange(new object[] {
-            "cont",
-            "iospoplp",
-            "jenny040yang",
-            "Nick84111",
-            "huang40001854",
-            "GaoShengYuan",
-            "QuiffCloud2",
-            "唐銘",
-            "admin",
-            "other"});
             this.UserName.MinimumWidth = 6;
             this.UserName.Name = "UserName";
             this.UserName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -273,7 +283,7 @@ namespace LogApp
             // 
             // LogForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(489, 300);
             this.Controls.Add(this.panel2);
@@ -289,6 +299,8 @@ namespace LogApp
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridArea)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mES_CloudDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bDP080000BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -309,6 +321,9 @@ namespace LogApp
         private System.Windows.Forms.Button bt_open;
         private System.Windows.Forms.Button bt_rush;
         private System.Windows.Forms.Timer timer1;
+        private MES_CloudDataSet mES_CloudDataSet;
+        private System.Windows.Forms.BindingSource bDP080000BindingSource;
+        private MES_CloudDataSetTableAdapters.BDP08_0000TableAdapter bDP08_0000TableAdapter;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Check;
         private System.Windows.Forms.DataGridViewComboBoxColumn UserName;
         private System.Windows.Forms.DataGridViewComboBoxColumn Type;

@@ -24,6 +24,8 @@ namespace LogApp
             version_now.Text = new PathInfor().Get_Version("Now");
         }
         public void LogForm_Load(object sender, EventArgs e){
+            // TODO: 這行程式碼會將資料載入 'mES_CloudDataSet.BDP08_0000' 資料表。您可以視需要進行移動或移除。
+            this.bDP08_0000TableAdapter.Fill(this.mES_CloudDataSet.BDP08_0000);
             Form.CheckForIllegalCrossThreadCalls = false;
             timer1.Start();
         }
