@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Expansion\FolderEditor.cs" />
     <Compile Include="PathInfor.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -95,5 +96,6 @@
   <ItemGroup>
     <Content Include="icons8_ball_point_pen.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

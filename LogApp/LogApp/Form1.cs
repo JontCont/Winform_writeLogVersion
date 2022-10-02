@@ -23,9 +23,26 @@ namespace LogApp
             version_new.Text = new PathInfor().Get_Version("New");
             version_now.Text = new PathInfor().Get_Version("Now");
         }
+
         public void LogForm_Load(object sender, EventArgs e){
             Form.CheckForIllegalCrossThreadCalls = false;
             timer1.Start();
+            this.Width = 556;//910
+        }
+
+        private void bt_Setting_Click(object sender, EventArgs e)
+        {
+            while (this.Width < 910)
+            {
+                this.Width += 4;
+            }
+        }
+        private void bt_return_Click(object sender, EventArgs e)
+        {
+            while (this.Width > 556)
+            {
+                this.Width -= 2;
+            }
         }
 
         private void bt_save_Click(object sender, EventArgs e)
@@ -70,11 +87,7 @@ namespace LogApp
                 GridArea.Rows[e.RowIndex].Cells[3].Value = e.RowIndex + 1;
             }
         }
-        private void bt_Setting_Click(object sender, EventArgs e)
-        {
-            Setting setting = new Setting();
-            setting.Show();
-        }
+        
         private void bt_open_Click(object sender, EventArgs e)
         {
             if (File.Exists(new PathInfor().Origin))
@@ -107,5 +120,7 @@ namespace LogApp
         {
             bt_rush_Click(sender,e);
         }
+
+
     }
 }

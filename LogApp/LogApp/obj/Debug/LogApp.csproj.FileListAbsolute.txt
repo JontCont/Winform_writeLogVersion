@@ -31,3 +31,15 @@ E:\Users\LeomonRD\Desktop\修改source\dev\LogApp\LogApp\obj\Debug\LogApp.csproj
 E:\Users\LeomonRD\Desktop\修改source\dev\LogApp\LogApp\obj\Debug\LogApp.csproj.CoreCompileInputs.cache
 E:\Users\LeomonRD\Desktop\修改source\dev\LogApp\LogApp\obj\Debug\LogApp.exe
 E:\Users\LeomonRD\Desktop\修改source\dev\LogApp\LogApp\obj\Debug\LogApp.pdb
+D:\Git\Github\10_Publish\Winform_writeLogVersion\LogApp\LogApp\bin\Debug\LogApp.exe.config
+D:\Git\Github\10_Publish\Winform_writeLogVersion\LogApp\LogApp\bin\Debug\LogApp.exe
+D:\Git\Github\10_Publish\Winform_writeLogVersion\LogApp\LogApp\bin\Debug\LogApp.pdb
+D:\Git\Github\10_Publish\Winform_writeLogVersion\LogApp\LogApp\obj\Debug\LogApp.csproj.AssemblyReference.cache
+D:\Git\Github\10_Publish\Winform_writeLogVersion\LogApp\LogApp\obj\Debug\LogApp.csproj.SuggestedBindingRedirects.cache
+D:\Git\Github\10_Publish\Winform_writeLogVersion\LogApp\LogApp\obj\Debug\LogApp.LogForm.resources
+D:\Git\Github\10_Publish\Winform_writeLogVersion\LogApp\LogApp\obj\Debug\LogApp.Properties.Resources.resources
+D:\Git\Github\10_Publish\Winform_writeLogVersion\LogApp\LogApp\obj\Debug\LogApp.Setting.resources
+D:\Git\Github\10_Publish\Winform_writeLogVersion\LogApp\LogApp\obj\Debug\LogApp.csproj.GenerateResource.cache
+D:\Git\Github\10_Publish\Winform_writeLogVersion\LogApp\LogApp\obj\Debug\LogApp.csproj.CoreCompileInputs.cache
+D:\Git\Github\10_Publish\Winform_writeLogVersion\LogApp\LogApp\obj\Debug\LogApp.exe
+D:\Git\Github\10_Publish\Winform_writeLogVersion\LogApp\LogApp\obj\Debug\LogApp.pdb

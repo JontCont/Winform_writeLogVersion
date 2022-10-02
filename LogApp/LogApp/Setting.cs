@@ -52,18 +52,27 @@ namespace LogApp
 
         private void bt_chosen_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dialog = new OpenFileDialog()
+
+            LogApp.Expansion.FolderBrowserDialog dialog = new LogApp.Expansion.FolderBrowserDialog()
             {
-                // 設定OpenFileDialog屬性
-                Title = "選擇要開啟的文字檔案",
-                Filter = "All Files (*.*)|*.*|Text Files (.txt)|*.txt",
-                FilterIndex = 1,
-                Multiselect = true
+                DirectoryPath = "c:\\"
             };
-            if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if (dialog.ShowDialog(this) == DialogResult.OK)
             {
-                textArea_01.Text = dialog.FileName;
+                this.Text = dialog.DirectoryPath;
             }
+            //OpenFileDialog dialog = new OpenFileDialog()
+            //{
+            //    // 設定OpenFileDialog屬性
+            //    Title = "選擇要開啟的文字檔案",
+            //    Filter = "All Files (*.*)|*.*|Text Files (.txt)|*.txt",
+            //    FilterIndex = 1,
+            //    Multiselect = true
+            //};
+            //if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            //{
+            //    textArea_01.Text = dialog.FileName;
+            //}
         }
 
         private void bt_chosen_02_Click(object sender, EventArgs e)
