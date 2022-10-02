@@ -498,6 +498,7 @@ namespace LogApp
             this.bt_folder.TabIndex = 11;
             this.bt_folder.Text = "選擇檔案";
             this.bt_folder.UseVisualStyleBackColor = true;
+            this.bt_folder.Click += new System.EventHandler(this.bt_folder_Click);
             // 
             // txt_folder
             // 
@@ -510,6 +511,7 @@ namespace LogApp
             this.txt_folder.Name = "txt_folder";
             this.txt_folder.Size = new System.Drawing.Size(182, 29);
             this.txt_folder.TabIndex = 10;
+            this.txt_folder.Click += new System.EventHandler(this.txt_folder_Click);
             // 
             // lbl_desc
             // 

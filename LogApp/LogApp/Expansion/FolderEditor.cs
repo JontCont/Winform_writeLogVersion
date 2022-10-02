@@ -37,14 +37,14 @@ namespace LogApp.Expansion
     #region FolderBrowserDialog Base
 
     /// <summary>
-    /// Vista 样式的选择文件对话框的基类
+    /// Vista 樣式的選擇文件對話框的基類
     /// </summary>
     [Description("提供一個Vista樣式的選擇文件對話框")]
     [Editor(typeof(FolderNameEditor), typeof(UITypeEditor))]
     public class FolderBrowserDialog : Component
     {
         /// <summary>
-        /// 初始化 FolderBrowser 的新实例
+        /// 初始化 FolderBrowser 的新實例
         /// </summary>
         public FolderBrowserDialog()
         {
@@ -52,13 +52,13 @@ namespace LogApp.Expansion
 
         #region Public Property
         /// <summary>
-        /// 获取在 FolderBrowser 中选择的文件夹路径
+        /// 獲取在 FolderBrowser 中選擇的文件夾路徑
         /// </summary>
         public string DirectoryPath { get; set; }
         /// <summary>
-        /// 向用户显示 FolderBrowser 的对话框
+        /// 向用戶顯示 FolderBrowser 的對話框
         /// </summary>
-        /// <param name="owner">任何实现 System.Windows.Forms.IWin32Window（表示将拥有模式对话框的顶级窗口）的对象。</param>
+        /// <param name="owner">任何實現 System.Windows.Forms.IWin32Window（表示將擁有模式對話框的頂級窗口）的對象。</param>
         /// <returns></returns>
         public DialogResult ShowDialog(IWin32Window owner)
         {

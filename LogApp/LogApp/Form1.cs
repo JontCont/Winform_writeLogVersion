@@ -156,5 +156,29 @@ namespace LogApp
                 btn_edit_save_Click(null,null);
             }
         }
+
+        private void txt_folder_Click(object sender, EventArgs e)
+        {
+            LogApp.Expansion.FolderBrowserDialog dialog = new LogApp.Expansion.FolderBrowserDialog()
+            {
+                DirectoryPath = "c:\\"
+            };
+            if (dialog.ShowDialog(this) == DialogResult.OK)
+            {
+                txt_folder.Text = dialog.DirectoryPath;
+            }
+        }
+
+        private void bt_folder_Click(object sender, EventArgs e)
+        {
+            LogApp.Expansion.FolderBrowserDialog dialog = new LogApp.Expansion.FolderBrowserDialog()
+            {
+                DirectoryPath = "c:\\"
+            };
+            if (dialog.ShowDialog(this) == DialogResult.OK)
+            {
+                txt_folder.Text = dialog.DirectoryPath;
+            }
+        }
     }
 }
