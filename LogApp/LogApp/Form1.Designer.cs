@@ -41,11 +41,12 @@ namespace LogApp
             this.bt_exit = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cbb_edit_type = new System.Windows.Forms.ComboBox();
+            this.cbb_edit_name = new System.Windows.Forms.ComboBox();
+            this.txt_desc = new System.Windows.Forms.TextBox();
+            this.txt_edit_item = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btn_edit_save = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -180,11 +181,12 @@ namespace LogApp
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox4);
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.textBox3);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.cbb_edit_type);
+            this.groupBox3.Controls.Add(this.cbb_edit_name);
+            this.groupBox3.Controls.Add(this.txt_desc);
+            this.groupBox3.Controls.Add(this.txt_edit_item);
             this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.btn_edit_save);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label1);
@@ -195,35 +197,47 @@ namespace LogApp
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "內容設定";
             // 
-            // textBox4
+            // cbb_edit_type
             // 
-            this.textBox4.Location = new System.Drawing.Point(294, 34);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(205, 94);
-            this.textBox4.TabIndex = 0;
+            this.cbb_edit_type.FormattingEnabled = true;
+            this.cbb_edit_type.Items.AddRange(new object[] {
+            "修改",
+            "新增",
+            "刪除",
+            "備註",
+            "其他"});
+            this.cbb_edit_type.Location = new System.Drawing.Point(90, 68);
+            this.cbb_edit_type.Name = "cbb_edit_type";
+            this.cbb_edit_type.Size = new System.Drawing.Size(166, 25);
+            this.cbb_edit_type.TabIndex = 16;
+            this.cbb_edit_type.Text = "修改";
             // 
-            // textBox2
+            // cbb_edit_name
             // 
-            this.textBox2.Location = new System.Drawing.Point(88, 31);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(168, 25);
-            this.textBox2.TabIndex = 0;
+            this.cbb_edit_name.FormattingEnabled = true;
+            this.cbb_edit_name.Items.AddRange(new object[] {
+            "cont"});
+            this.cbb_edit_name.Location = new System.Drawing.Point(90, 31);
+            this.cbb_edit_name.Name = "cbb_edit_name";
+            this.cbb_edit_name.Size = new System.Drawing.Size(166, 25);
+            this.cbb_edit_name.TabIndex = 16;
             // 
-            // textBox3
+            // txt_desc
             // 
-            this.textBox3.Location = new System.Drawing.Point(88, 103);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(168, 25);
-            this.textBox3.TabIndex = 0;
+            this.txt_desc.Location = new System.Drawing.Point(294, 34);
+            this.txt_desc.Multiline = true;
+            this.txt_desc.Name = "txt_desc";
+            this.txt_desc.Size = new System.Drawing.Size(205, 59);
+            this.txt_desc.TabIndex = 0;
+            this.txt_desc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_desc_KeyDown);
             // 
-            // textBox1
+            // txt_edit_item
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(88, 68);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(168, 25);
-            this.textBox1.TabIndex = 0;
+            this.txt_edit_item.Location = new System.Drawing.Point(88, 103);
+            this.txt_edit_item.Name = "txt_edit_item";
+            this.txt_edit_item.Size = new System.Drawing.Size(168, 25);
+            this.txt_edit_item.TabIndex = 0;
+            this.txt_edit_item.Text = "1";
             // 
             // label3
             // 
@@ -234,6 +248,17 @@ namespace LogApp
             this.label3.Size = new System.Drawing.Size(34, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "內容";
+            // 
+            // btn_edit_save
+            // 
+            this.btn_edit_save.Location = new System.Drawing.Point(336, 103);
+            this.btn_edit_save.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_edit_save.Name = "btn_edit_save";
+            this.btn_edit_save.Size = new System.Drawing.Size(115, 30);
+            this.btn_edit_save.TabIndex = 0;
+            this.btn_edit_save.Text = "存檔";
+            this.btn_edit_save.UseVisualStyleBackColor = true;
+            this.btn_edit_save.Click += new System.EventHandler(this.btn_edit_save_Click);
             // 
             // label4
             // 
@@ -318,6 +343,7 @@ namespace LogApp
             this.GridArea.RowTemplate.Height = 24;
             this.GridArea.Size = new System.Drawing.Size(483, 139);
             this.GridArea.TabIndex = 9;
+            this.GridArea.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridArea_CellClick);
             this.GridArea.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.GridArea_RowPostPaint);
             // 
             // UserName
@@ -345,9 +371,10 @@ namespace LogApp
             this.Type.HeaderText = "Type";
             this.Type.Items.AddRange(new object[] {
             "修改",
-            "更新",
             "新增",
-            "刪除"});
+            "刪除",
+            "備註",
+            "其他"});
             this.Type.MinimumWidth = 6;
             this.Type.Name = "Type";
             this.Type.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -559,20 +586,14 @@ namespace LogApp
         private System.Windows.Forms.Button bt_open;
         private System.Windows.Forms.Button bt_rush;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.DataGridViewComboBoxColumn UserName;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Type;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Item;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Desc;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_desc;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_edit_item;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox textArea_02;
@@ -587,6 +608,13 @@ namespace LogApp
         private System.Windows.Forms.Label lbl_desc;
         private System.Windows.Forms.Button bt_return;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_edit_save;
+        private System.Windows.Forms.ComboBox cbb_edit_name;
+        private System.Windows.Forms.ComboBox cbb_edit_type;
+        private System.Windows.Forms.DataGridViewComboBoxColumn UserName;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Item;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Desc;
     }
 }
 
